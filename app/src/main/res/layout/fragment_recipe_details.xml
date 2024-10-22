@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_medium"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/recipeDetailImageView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/image_large_size"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/progressBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/recipeDetailTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/recipe_title"
+            android:textAppearance="@style/TextAppearance.App.Headline6"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/recipeDetailImageView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Время приготовления -->
+        <TextView
+            android:id="@+id/recipeDetailTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:drawablePadding="@dimen/padding_tiny"
+            android:text="@string/time"
+            android:textAppearance="@style/TextAppearance.App.Headline"
+            android:textColor="@color/black"
+            app:drawableStartCompat="@drawable/ic_timer"
+            app:layout_constraintTop_toBottomOf="@id/recipeDetailTitleTextView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Список ингредиентов -->
+        <TextView
+            android:id="@+id/ingredientsLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/ingredients_label"
+            android:textAppearance="@style/TextAppearance.App.Headline6"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/recipeDetailTimeTextView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ingredientsList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_small"
+            app:layout_constraintTop_toBottomOf="@id/ingredientsLabelTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/instructionsLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/instructions_label"
+            android:textAppearance="@style/TextAppearance.App.Headline6"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/ingredientsList"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/instructionsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/instructionsLabelTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_favorite"
+            app:layout_constraintTop_toBottomOf="@id/instructionsTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <Button
+            android:id="@+id/deleteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_recipe"
+            app:layout_constraintTop_toBottomOf="@id/saveBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/margin_small"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

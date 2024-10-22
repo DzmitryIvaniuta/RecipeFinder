@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">RecipeFinder</string>
+    <string name="recipe_title">Название рецепта</string>
+    <string name="enter_ingredients">Введите ингредиенты или название рецепта</string>
+    <string name="ingredients_label">Ингредиенты:</string>
+    <string name="instructions_label">Инструкции:</string>
+    <string name="save_favorite">Сохранить в избранное</string>
+    <string name="delete_recipe">Удалить рецепт</string>
+    <string name="are_you_sure">Вы уверены, что хотите удалить рецепт?</string>
+    <string name="recipe_deleted">Рецепт удален</string>
+    <string name="favorite_recipes">Избранные рецепты</string>
+    <string name="ingredient_name">Ingredient Name</string>
+    <string name="amount">Amount</string>
+    <string name="unit">Unit</string>
+    <string name="time">Время: %s минут</string>
+    <string name="home">Home</string>
+    <string name="favourites">Favourites</string>
+    <string name="recipe_saved">Рецепт сохранен</string>
+    <string name="deleting_recipe">Удаление рецепта</string>
+    <string name="delete">Удалить</string>
+    <string name="cancel">Отмена</string>
+</resources>
